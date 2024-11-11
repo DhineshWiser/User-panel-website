@@ -4,6 +4,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button';
 import { IoMdLogIn } from "react-icons/io";
+import { SiGnuprivacyguard } from "react-icons/si";
+import { Link } from 'react-router-dom'
+
 
 
 
@@ -19,8 +22,16 @@ function Navbarr() {
             <Nav.Link href="#footer">Footer</Nav.Link>
           </Nav>
           <div className='buttons'>
+            <Link to={"/signin"}>
             <a href='' className='btn btn-outline-white border-white '>{<IoMdLogIn />}
-                login</a>
+                Signin</a>
+            </Link>
+            
+               <Link to={"/signup"}>
+               <a href='' className='btn btn-outline-white border-white ms-2 '><SiGnuprivacyguard />
+               Signup </a>
+              </Link>
+
           </div>
         </Container>
       </Navbar>
