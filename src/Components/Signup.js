@@ -1,6 +1,7 @@
 "use client";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { SiGnuprivacyguard } from "react-icons/si";
 // import { useRouter } from "next/navigation";
 import { useState } from "react";
 
@@ -37,7 +38,8 @@ const Signup = () => {
   };
   return (
     <div className="d-flex flex-column justify-content-center align-items-center vh-100  bg-light text-dark card">
-      <h1 className="fw-bold text-danger">Sign Up</h1>
+      <SiGnuprivacyguard className="fs-3"/>
+      <h1 className="fw-bold fs-2" data-aos="fade-up">Sign Up</h1>
       <form className="w-25" onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">
@@ -93,14 +95,14 @@ const Signup = () => {
             onChange={(e) => setRepassword(e.target.value)}
           />
         </div>
-        <div className="d-flex justify-content-center gap-3 my-4">
-          <button type="submit" className="btn btn-warning  fw-bold px-3">
+        <div className="d-flex justify-content-between my-4">
+          <button type="submit" className="btn btn-warning text-white  fw-bold px-3">
             Sign up
           </button>
           <button
             onClick={DeleteData}
             type="submit"
-            className="btn btn-success  fw-bold px-3"
+            className="btn btn-danger  fw-bold px-3"
           >
             Delete
           </button>

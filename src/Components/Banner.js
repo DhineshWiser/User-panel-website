@@ -11,7 +11,7 @@ function Banner() {
         <img class="card-img" src="https://flone.jamstacktemplates.dev/assets/img/slider/slider-2.jpg" alt="Card image" height="645px" />
         <div class="card-img-overlay d-flex flex-column justify-content-center text-end">
           <div className='container'>
-            <h5 class="card-title display-2 text-black fw-bolder">Men's fashions</h5>
+            <h5 class="card-title display-2 text-black fw-bolder" data-aos="fade-up" data-aos-duration="1000">Men's fashions</h5>
             <p class="card-text text-black fs-3">___stylish___</p>
             <div>
               <a href='' className='btn btn-outline-dark py-1 px-1 fw-bold'>shop now</a>
@@ -22,17 +22,6 @@ function Banner() {
       
 
       <div className='container'>
-        {/* <div className='row'>
-          <div className='col-4'>
-            <img className='w-100' src="/assets/images/panner1.jpg"  />
-          </div>
-          <div className='col-4'>
-          <img className='w-100' src="/assets/images/panner2.jpg"  />
-          </div>
-          <div className='col-4'>
-          <img className='w-100' src="/assets/images/panner3.jpeg"  />
-          </div>
-        </div> */}
         <div className='row mt-5'>
           <div className='col-4 '>
             <LiaShippingFastSolid className='fs-1'/>

@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 
 function Footer() {
     return (
-        <div className='bg-light mt-5 py-5' id="footer">
+        <div className='bg-secondary mt-5 py-5' id="footer">
             <Container>
                 <Row>
                     <Col xs>

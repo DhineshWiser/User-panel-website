@@ -11,9 +11,7 @@ function Home() {
         <Navbarr />
         <Banner />
         <Products />
-        <Footer />
-      
-      
+        <Footer />  
     </div>
   )
 }

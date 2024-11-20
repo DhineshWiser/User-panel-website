@@ -37,18 +37,11 @@
     transform: rotate(360deg);
   }
 }
-/* .sin-page{
-  width: 500px;
+.img:hover{
+  transform: scale(1.1);
+  width: 300px;
   height: 300px;
-  align-items: center;
-  justify-content: center;
-
-} */
- /* .card{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  height: 500px;
-  justify-content: center;
+  transition: all 500ms;
+}
   
- } */
+

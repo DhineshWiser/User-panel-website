@@ -1,13 +1,13 @@
 
 "use client";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { ImGithub } from "react-icons/im";
 // import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { FaUserCircle } from "react-icons/fa";
 import { Link } from 'react-router-dom'
 
-const Signin = () => {
+const Login = () => {
   const [apiData, setApiData] = useState([]);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -49,9 +49,10 @@ const Signin = () => {
   };
 
   return (
-    <div className="d-flex flex-column justify-content-center align-items-center vh-100 bg-light text-dark card">
-      <h1 className="fw-bold text-danger py-4">Sign in</h1>
-      <form className="w-25" onSubmit={handleSubmit}>
+    <div className="d-flex flex-column justify-content-center align-items-center vh-100 bg-light  text-dark card">
+      <FaUserCircle  className="fs-2"/>
+      <h1 className="fw-bold  py-2" data-aos="fade-up">Log in</h1>
+      <form className="w-25 " onSubmit={handleSubmit}>
         <div className="mb-3">
           <input
             type="email"
@@ -71,10 +72,17 @@ const Signin = () => {
           />
         </div>
         <div className="d-flex justify-content-between mt-4">
+        <Link to={"/signup"}>
           <button type="submit" className="btn btn-primary fw-bold">
-            Sign in
+            signup
           </button>
-          <Link href={"Updatepassword"} className="btn btn-primary fw-bold">
+          </Link>
+          <Link to={""}>
+          <button type="submit" className="btn btn-danger fw-bold">
+            submit
+          </button>
+          </Link>
+          <Link href={"Updatepassword"} className="btn btn-primary fw-bold px-1">
             Forget Password
           </Link>
         </div>
@@ -82,4 +90,4 @@ const Signin = () => {
     </div>
   );
 };
-export default Signin;
+export default Login;
