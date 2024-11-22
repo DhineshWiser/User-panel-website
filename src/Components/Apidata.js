@@ -19,12 +19,7 @@ import bag1 from "../assets/Laptop-bag.webp";
 import bag2 from "../assets/travel-bag.webp";
 import bag3 from "../assets/office-bag.webp";
 import bag4 from "../assets/college-bag.webp";
-import { useParams } from 'react-router-dom';
-import Footer from './Footer'
-import Navbarr from './Navbarr'
-
-
-
+import { useNavigate, useParams } from 'react-router-dom';
 
 const api = [
     {
@@ -35,22 +30,22 @@ const api = [
             {
                 "image": watch1,
                 "name": "metalic watch",
-                "price": " $2.79"
+                "price": "₹499"
             },
             {
                 "image": watch2,
                 "name": "Leather watch",
-                "price": " $2.79"
+                "price": " ₹299"
             },
             {
                 "image": watch3,
                 "name": "Digital watch",
-                "price": " $2.79"
+                "price": " ₹399"
             },
             {
                 "image": watch4,
                 "name": "Smart watch",
-                "price": " $2.79"
+                "price": " ₹999"
             }
         ]
     },
@@ -62,22 +57,22 @@ const api = [
             {
                 "image": shoes1,
                 "name": "casual shoes",
-                "price": " $2.79"
+                "price": " ₹999"
             },
             {
                 "image": shoes2,
                 "name": "formal shoes",
-                "price": " $2.79"
+                "price": " ₹699"
             },
             {
                 "image": shoes3,
                 "name": "boots shoes",
-                "price": " $2.79"
+                "price": " ₹799"
             },
             {
                 "image": shoes4,
                 "name": "shorts shoes",
-                "price": " $2.79"
+                "price": " ₹499"
             }
         ]
     },
@@ -89,22 +84,22 @@ const api = [
             {
                 "image": bag1,
                 "name": "laptop bag",
-                "price": " $2.79"
+                "price": " ₹699"
             },
             {
                 "image": bag2,
                 "name": "travel bag",
-                "price": " $2.79"
+                "price": " ₹999"
             },
             {
                 "image": bag3,
                 "name": "office bag",
-                "price": " $2.79"
+                "price": " ₹599"
             },
             {
                 "image": bag4,
                 "name": "college bag",
-                "price": " $2.79"
+                "price": " ₹399"
             }
         ]
     }
@@ -115,6 +110,7 @@ function Apidata() {
     const [products, setProducts] = useState([])
     const [name, setName] = useState("")
     const { id } = useParams()
+    const navigate = useNavigate();
 
     useEffect(() => {
         console.log(id);
@@ -129,16 +125,19 @@ function Apidata() {
         console.log(products);
 
     }, [])
-
+    const Handleclick = (id)=>{
+        console.log(id);
+        navigate(`/productsdetails/${id}`)
+         
+    }
+    
     return (
         <div>
-            <Navbarr />
-            <img class="card-img" src={banner} alt="Card image" height="645px" />
-            
+            <img class="card-img" src={banner} alt="Card image" height="645px" />  
             <Container>
                 <Row className='py-5'>
-                    {products.map((a) => (
-                        <Col md={3} >
+                    {products.map((a,index) => (
+                        <Col md={3} onClick={()=> Handleclick(index)}>
                             <Card style={{ width: '100%', height: 'auto', marginTop: '30px' }} className='img'>
                                 <Card.Img  variant="top" src={a.image} style={{ height: '254px' }} />
                                 <Card.Body>
@@ -151,10 +150,7 @@ function Apidata() {
                     ))}
                 </Row>
             </Container>
-            <Footer />
-
         </div>
     )
 }
-
 export default Apidata

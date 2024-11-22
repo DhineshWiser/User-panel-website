@@ -77,7 +77,7 @@ const Login = () => {
             signup
           </button>
           </Link>
-          <Link to={""}>
+          <Link to={"/"}>
           <button type="submit" className="btn btn-danger fw-bold">
             submit
           </button>
