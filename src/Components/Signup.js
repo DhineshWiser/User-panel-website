@@ -2,7 +2,6 @@
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { SiGnuprivacyguard } from "react-icons/si";
-// import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const Signup = () => {
@@ -19,7 +18,7 @@ const Signup = () => {
     if (password == repassword) {
       if (email == "" && password == "")
         return alert("invaild eamil or password");
-      axios.post("https://66f0f85341537919154f06e7.mockapi.io/signup", {
+      axios.post("https://670f45153e715186165720fb.mockapi.io/admin", {
         num,
         email,
         password,
@@ -34,7 +33,7 @@ const Signup = () => {
     }
   };
   const DeleteData = (id) => {
-    axios.delete(`https://66f0f85341537919154f06e7.mockapi.io/signup/1`);
+    axios.delete(`https://670f45153e715186165720fb.mockapi.io/admin/1`);
   };
   return (
     <div className="d-flex flex-column justify-content-center align-items-center vh-100  bg-light text-dark card">

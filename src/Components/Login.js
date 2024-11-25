@@ -14,7 +14,7 @@ const Login = () => {
 //   const router = useRouter();
   useEffect(() => {
     axios
-      .get("https://66f0f85341537919154f06e7.mockapi.io/signup")
+      .get("https://670f45153e715186165720fb.mockapi.io/admin")
       .then((response) => {
         setApiData(response.data);
       });
