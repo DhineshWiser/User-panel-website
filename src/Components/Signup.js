@@ -33,7 +33,7 @@ const Signup = () => {
       })
       .catch((err) => {
         console.error("Error: ", err);
-        toast.error("Error during signup. Please try again.");
+        toast.error("Error during signup. Please try again......");
       });
   };
 
