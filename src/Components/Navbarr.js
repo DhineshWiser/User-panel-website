@@ -16,9 +16,9 @@ function Navbarr() {
           <Nav className="mx-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <NavDropdown title="Categories" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/apidata/1">Watches</NavDropdown.Item>
-              <NavDropdown.Item href="/apidata/2">Shoes</NavDropdown.Item>
-              <NavDropdown.Item href="/apidata/3">Bags</NavDropdown.Item>
+              <NavDropdown.Item href="/watch">Watches</NavDropdown.Item>
+              <NavDropdown.Item href="/shoes">Shoes</NavDropdown.Item>
+              <NavDropdown.Item href="/bags">Bags</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <div className='buttons'>

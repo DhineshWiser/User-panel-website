@@ -44,7 +44,7 @@ function Footer() {
                     <Col xs>
                         <h5>SUBSCRIBE</h5>
                         <div>Get E-mail updates about our latest shop and special offers.</div>
-                        <input type="text" placeholder='Enter your email address'></input>
+                        <input type="text" placeholder='Enter your email address' className='py-1'></input>
                         <a href=''>SUBSCRIBE</a>
 
                     </Col>

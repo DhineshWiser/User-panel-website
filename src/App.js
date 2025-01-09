@@ -12,6 +12,7 @@ import Apidata from './Components/Apidata';
 import Productsdetails from './Components/Productsdetails';
 import Navbarr from './Components/Navbarr';
 import Footer from './Components/Footer';
+import ForgetPassword from './Components/ForgetPassword';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path='/bags' element={<Bags />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/forgetpassword' element={<ForgetPassword />} />
         </Routes>
         <Footer />
       </Router>

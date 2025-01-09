@@ -9,15 +9,24 @@ import Button from 'react-bootstrap/Button';
 import watchcat from "../assets/watchcat.jpeg";
 import shoescat from "../assets/shoescat.webp";
 import bagcat from "../assets/bagcat.jpg";
+import { useNavigate, useParams } from 'react-router-dom';
+
 
 function Products() {
     const giturl="https://raw.githubusercontent.com/DhineshWiser/User-panel-website/refs/heads/main/src/assets/"
     
     const [image, setImage] = useState([]);
+    const { id } = useParams()
+    const navigate = useNavigate();
 
     useEffect(() => {
         GetData();
     }, []);
+
+    const Handleclick = (id) => {
+        console.log(id);
+        navigate(`/productsdetails/${id}`)
+    }
 
     const GetData = () => {
         axios
@@ -54,6 +63,7 @@ function Products() {
                 </div>
 
                 <div className=' d-flex justify-content-center mb-5 pb-5 gap-3'>
+                    
                     <Col md={3} >
                         <Link to={"/watch"} className='text-decoration-none text-dark' >
                             <img src={watchcat} alt="Card image" style={{ width: "100%", height: "200px" }} />
@@ -77,11 +87,11 @@ function Products() {
 
             <Row>
                 <div className='mb-5'>
-                    <h1 className=' fw-bold '>Products</h1>
+                    <h1 className=' fw-bold '>Products list</h1>
                     <hr />
                 </div>
                 {image.map((items)=>(
-                    <Col md={3} className='mt-5'>
+                    <Col md={3} className='mt-5' onClick={() => Handleclick(items.id)}>
                     <Card style={{ width: '100%' }} className='img'>
                         <Card.Img variant="top" src={ giturl+items.image} style={{ width: "100%", height: "300px" }} />
                         <Card.Body>
