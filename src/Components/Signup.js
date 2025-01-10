@@ -26,14 +26,14 @@ const Signup = () => {
 
     axios.post("https://670f45153e715186165720fb.mockapi.io/admin", { num, email, password })
       .then(() => {
-        toast.success("Signup successful! Welcome!");
+        toast.success("Signup successful Welcome!");
         
         resetForm();
         navigate('/login'); 
       })
       .catch((err) => {
         console.error("Error: ", err);
-        toast.error("Error during signup. Please try again......");
+        toast.error("Error during signup. Please try again....");
       });
   };
 
