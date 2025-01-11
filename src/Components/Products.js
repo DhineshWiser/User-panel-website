@@ -92,7 +92,7 @@ function Products() {
                 </div>
                 {image.map((items) => (
                     <Col xs={12} sm={6} md={3} key={items.id} className='mt-5'>
-                        <Card onClick={() => Handleclick(items.id)} className='h-100 img'>
+                        <Card onClick={() => Handleclick(items.id)} className='h-100'>
                             <Card.Img
                                 variant="top"
                                 src={giturl + items.image}
