@@ -31,7 +31,8 @@ const Login = () => {
     const { email, password } = values;
 
     let EmailData = apiData.filter((items) => items.email === email);
-
+    console.log(EmailData);
+    
     if (EmailData.length === 0) {
       toast.error("Can't find your email, please register first.");
       navigate('/signup');
@@ -39,7 +40,7 @@ const Login = () => {
       if (password === EmailData[0]?.password) {
         toast.success("Login successful!");
         navigate('/');
-      } else {
+      } else  {
         toast.error("Incorrect password.");
       }
     }

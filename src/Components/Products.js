@@ -86,24 +86,28 @@ function Products() {
             </Row>
 
             <Row>
-                <div className='mb-5'>
-                    <h1 className=' fw-bold '>Products list</h1>
+            <div className='mb-5'>
+                    <h1 className='fw-bold'>Products List</h1>
                     <hr />
                 </div>
-                {image.map((items)=>(
-                    <Col md={3} className='mt-5' onClick={() => Handleclick(items.id)}>
-                    <Card style={{ width: '100%' }} className='img'>
-                        <Card.Img variant="top" src={ giturl+items.image} style={{ width: "100%", height: "300px" }} />
+                {image.map((items) => (
+                    <Col xs={12} sm={6} md={3} key={items.id} className='mt-5'>
+                        <Card onClick={() => Handleclick(items.id)} className='h-100 img'>
+                            <Card.Img
+                                variant="top"
+                                src={giturl + items.image}
+                                style={{ objectFit: 'cover', width: '100%', height: '300px' }}
+                            />
                         <Card.Body>
-                            <Card.Title>{items.name}</Card.Title>
-                            <Card.Text>
-                                {items.price}
-                            </Card.Text>
-                            <Button className='btn btn-outline-dark py-1 px-1' variant="primary">Buy now</Button>
-                        </Card.Body>
-                    </Card>
-                </Col>
-                ))}     
+                                <Card.Title>{items.name}</Card.Title>
+                                <Card.Text>
+                                    {items.price}
+                                </Card.Text>
+                                <Button className='btn btn-outline-dark py-1 px-1' variant="primary">Buy Now</Button>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                ))}
             </Row>
         </Container>
     )
